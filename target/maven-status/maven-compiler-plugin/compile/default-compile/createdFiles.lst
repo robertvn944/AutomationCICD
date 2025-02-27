@@ -1,0 +1,10 @@
+RvNLearn\resources\ExtentReporterNG.class
+RvNLearn\pageObjects\ShopFront.class
+RvNLearn\pageObjects\CheckOut.class
+RvNLearn\pageObjects\LandingPage.class
+RvNLearn\utilityObjects\UtilityObjects.class
+RvNLearn\pageObjects\ShoppingCartPage.class
+RvNLearn\pageObjects\Menu.class
+RvNLearn\pageObjects\OrderHistoryPage.class
+RvNLearn\pageObjects\ConfirmationPage.class
+RvNLearn\utilityObjects\CommonActions.class

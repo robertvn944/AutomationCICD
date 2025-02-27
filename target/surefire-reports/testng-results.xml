@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="1" failed="2" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-11T14:42:06 NZDT" name="Suite" finished-at="2025-02-11T14:42:55 NZDT" duration-ms="49315">
+    <groups>
+      <group name="ErrorHandling">
+        <method signature="ErrorValidation.validateLoginError()[pri:0, instance:RvNLearn.tests.ErrorValidation@7d7758be]" name="validateLoginError" class="RvNLearn.tests.ErrorValidation"/>
+      </group> <!-- ErrorHandling -->
+      <group name="Purchase">
+        <method signature="MainPageTest.customerPurchase(java.util.HashMap)[pri:0, instance:RvNLearn.tests.MainPageTest@3932c79a]" name="customerPurchase" class="RvNLearn.tests.MainPageTest"/>
+        <method signature="MainPageTest.orderHistoryTest(java.util.HashMap)[pri:0, instance:RvNLearn.tests.MainPageTest@3932c79a]" name="orderHistoryTest" class="RvNLearn.tests.MainPageTest"/>
+      </group> <!-- Purchase -->
+    </groups>
+    <test started-at="2025-02-11T14:42:06 NZDT" name="Error Validation" finished-at="2025-02-11T14:42:27 NZDT" duration-ms="20564">
+      <class name="RvNLearn.tests.ErrorValidation">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:RvNLearn.tests.ErrorValidation@7d7758be]" started-at="2025-02-11T14:42:06 NZDT" name="launchApplication" finished-at="2025-02-11T14:42:25 NZDT" duration-ms="18954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="validateLoginError()[pri:0, instance:RvNLearn.tests.ErrorValidation@7d7758be]" started-at="2025-02-11T14:42:25 NZDT" name="validateLoginError" finished-at="2025-02-11T14:42:26 NZDT" duration-ms="1254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:RvNLearn.tests.ErrorValidation@7d7758be]" started-at="2025-02-11T14:42:26 NZDT" name="tearDown" finished-at="2025-02-11T14:42:27 NZDT" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- RvNLearn.tests.ErrorValidation -->
+    </test> <!-- Error Validation -->
+    <test started-at="2025-02-11T14:42:06 NZDT" name="Main Page Test" finished-at="2025-02-11T14:42:55 NZDT" duration-ms="49315">
+      <class name="RvNLearn.tests.MainPageTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:RvNLearn.tests.MainPageTest@3932c79a]" started-at="2025-02-11T14:42:07 NZDT" name="launchApplication" finished-at="2025-02-11T14:42:38 NZDT" duration-ms="31191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="customerPurchase(java.util.HashMap)[pri:0, instance:RvNLearn.tests.MainPageTest@3932c79a]" started-at="2025-02-11T14:42:38 NZDT" name="customerPurchase" data-provider="getData" finished-at="2025-02-11T14:42:39 NZDT" duration-ms="1523" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{country=south africa, item=ADIDAS, cvv=123, cardName=Joe  Soap, success=THANKYOU FOR THE ORDER., cntry=sou, pwd=sLW_U7jz'4vBPGv, email=me@here.com, paymentType=Credit Card}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)" because the return value of "RvNLearn.pageObjects.ShopFront.getItemOfChoice(String)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)" because the return value of "RvNLearn.pageObjects.ShopFront.getItemOfChoice(String)" is null
+at RvNLearn.pageObjects.ShopFront.addItemToCart(ShopFront.java:51)
+at RvNLearn.tests.MainPageTest.customerPurchase(MainPageTest.java:47)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customerPurchase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:RvNLearn.tests.MainPageTest@3932c79a]" started-at="2025-02-11T14:42:40 NZDT" name="tearDown" finished-at="2025-02-11T14:42:40 NZDT" duration-ms="160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:RvNLearn.tests.MainPageTest@3932c79a]" started-at="2025-02-11T14:42:40 NZDT" name="launchApplication" finished-at="2025-02-11T14:42:53 NZDT" duration-ms="12283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="customerPurchase(java.util.HashMap)[pri:0, instance:RvNLearn.tests.MainPageTest@3932c79a]" started-at="2025-02-11T14:42:53 NZDT" name="customerPurchase" data-provider="getData" finished-at="2025-02-11T14:42:54 NZDT" duration-ms="1640" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{country=new zealand, item=IPHONE, cvv=456, cardName=Jane Doe, success=THANKYOU FOR THE ORDER., cntry=new, pwd=sLW_U7jz'4vBPGv, email=IamStill@here.com, paymentType=Credit Card}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)" because the return value of "RvNLearn.pageObjects.ShopFront.getItemOfChoice(String)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)" because the return value of "RvNLearn.pageObjects.ShopFront.getItemOfChoice(String)" is null
+at RvNLearn.pageObjects.ShopFront.addItemToCart(ShopFront.java:51)
+at RvNLearn.tests.MainPageTest.customerPurchase(MainPageTest.java:47)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- customerPurchase -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:RvNLearn.tests.MainPageTest@3932c79a]" started-at="2025-02-11T14:42:55 NZDT" name="tearDown" finished-at="2025-02-11T14:42:55 NZDT" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="orderHistoryTest(java.util.HashMap)[pri:0, instance:RvNLearn.tests.MainPageTest@3932c79a]" started-at="2025-02-11T14:42:55 NZDT" name="orderHistoryTest" finished-at="2025-02-11T14:42:55 NZDT" depends-on-methods="RvNLearn.tests.MainPageTest.customerPurchase" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method RvNLearn.tests.MainPageTest.orderHistoryTest() on instance RvNLearn.tests.MainPageTest@3932c79a depends on not successfully finished methods 
+[RvNLearn.tests.MainPageTest.customerPurchase() on instance RvNLearn.tests.MainPageTest@3932c79a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method RvNLearn.tests.MainPageTest.orderHistoryTest() on instance RvNLearn.tests.MainPageTest@3932c79a depends on not successfully finished methods 
+[RvNLearn.tests.MainPageTest.customerPurchase() on instance RvNLearn.tests.MainPageTest@3932c79a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderHistoryTest -->
+      </class> <!-- RvNLearn.tests.MainPageTest -->
+    </test> <!-- Main Page Test -->
+  </suite> <!-- Suite -->
+</testng-results>

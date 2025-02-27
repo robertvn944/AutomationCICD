@@ -1,0 +1,24 @@
+[
+	{
+		"email" : "me@here.com",
+		"pwd" : "sLW_U7jz'4vBPGv",
+		"item" : "ADIDAS",
+		"paymentType" : "Credit Card",
+		"cvv" : "123",
+		"cardName" : "Joe  Soap",
+		"success" : "THANKYOU FOR THE ORDER.",
+		"cntry" : "sou",
+		"country" : "south africa"
+	}, 
+	{
+		"email" : "IamStill@here.com",
+		"pwd" : "sLW_U7jz'4vBPGv",
+		"item" : "IPHONE",
+		"paymentType" : "Credit Card",
+		"cvv" : "456",
+		"cardName" : "Jane Doe",
+		"success" : "THANKYOU FOR THE ORDER.",
+		"cntry" :"new",
+		"country" : "new zealand"
+	}
+]

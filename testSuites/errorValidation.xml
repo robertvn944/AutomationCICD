@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+  <groups>
+    <run>
+      <include name="ErrorHandling" />
+    </run>
+  </groups>
+  <test thread-count="5" name="Main Page Test">
+    <classes>
+      <class name="RvNLearn.tests.MainPageTest"/>
+    </classes>
+  </test>
+  <test thread-count="5" name="Error Validation">
+    <classes>
+      <class name="RvNLearn.tests.ErrorValidation"/>
+    </classes>
+  </test>
+</suite> 
